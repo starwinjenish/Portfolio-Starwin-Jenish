@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cinzel", serif;
+  color: #f0e6c8;
+  background-image: url("img/about.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Navbar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: #d6c48f;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+nav a {
+  color: #d6c48f;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff3b0;
+  text-shadow: 0 0 10px #d6c48f;
+}
+
+/* About Section */
+.about-page {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ✅ moves content to LEFT */
+  height: calc(100vh - 100px);
+  text-align: left;
+  padding: 0 100px;
+}
+
+.about-text {
+  max-width: 500px;
+  background: rgba(0, 0, 0, 0.3); /* light transparent box */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(214, 196, 143, 0.3);
+  animation: fadeIn 2s ease;
+  backdrop-filter: blur(4px); /* soft blur effect */
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  color: #d6c48f;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #a88b3d;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-page {
+    justify-content: center;
+    padding: 0 30px;
+  }
+
+  .about-text {
+    max-width: 100%;
+    padding: 25px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+}

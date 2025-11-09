@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    overflow: hidden;
+
+}
+
+
+
+body{
+    background-image: url("img/index.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: "Cinzel", serif;
+    color: #d6c48f;
+    display: flex;
+    flex-direction: column;
+}
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px, 50px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.logo{
+    font-size: 1.5rem;
+    color: #d6c48f;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+nav a {
+  color: #d6c48f;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #fff3b0;
+  text-shadow: 0 0 10px #d6c48f, 0 0 20px #d6c48f;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #d6c48f;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+
+
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Move content to the top */
+  align-items: flex-end;        /* Move content to the right */
+  text-align: right;            /* Align text to the right side */
+  padding: 100px 80px 0 0;      /* Space from top & right edges */
+  text-shadow: 0 0 10px #a88b3d, 0 0 20px #6e5c24;
+}
+
+
+.hero-title{
+    font-size: 4rem;
+    color: #d6c48f;
+    letter-spacing: 4px;
+    animation: glow 3s ease-in-out infinite alternate;  
+}
+
+.hero-subtitle{
+    font-size: 1.3rem;
+    color: #c8b56a;
+    margin-top: 10px;
+    animation: fadein 2s ease;
+}
+
+.btn{
+    margin-top: 25px;
+    padding: 10px 25px;
+    border: 2px solid #d6c48f;
+    color: #d6c48f;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover{
+     background-color: #d6c48f;
+     color: black;
+     box-shadow: 0 0 15px #d6c48f;
+}
+
+/* Animation */
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 10px #a88b3d, 0 0 20px #6e5c24;
+    }
+    to{
+        text-shadow: 0 0 25px #d6c48f, 0 0 50px #a88b3d ;
+    }
+}
+
+@keyframes fadein{
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Resposive Design */
+/* 🌐 Responsive Design */
+
+/* Large Screens (default) */
+/* — no change, your existing design works great for desktops */
+
+/* 📱 Tablets and Small Laptops */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  nav a {
+    margin: 8px;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding: 80px 50px 0 0;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 20px;
+  }
+}
+
+/* 📱 Mobile Screens */
+@media (max-width: 600px) {
+  body {
+    background-position: center top;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+ 
+  .hero {
+    align-items: center;         /* move text to center on mobile */
+    text-align: center;
+    padding: 100px 20px 0 20px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 7px 18px;
+    margin-top: 15px;
+  }
+}
+/* responsive design code  end */
+/* === Side Quotes Grid === */
+.side-quotes {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 40px; /* vertical + horizontal spacing */
+  padding: 0 60px;
+  justify-items: center;
+}
+
+.quote-box {
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid #d6c48f;
+  border-radius: 10px;
+  padding: 20px 25px;
+  width: 85%;
+  color: #d6c48f;
+  text-align: center;
+  font-family: "Cinzel", serif;
+  box-shadow: 0 0 15px rgba(214, 196, 143, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-box:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 25px #d6c48f, 0 0 40px #a88b3d;
+}
+
+.quote {
+  font-size: 1.05rem;
+  line-height: 1.4;
+  animation: glow 4s ease-in-out infinite alternate;
+}
+
+.quote-author {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #b8a24c;
+  opacity: 0.8;
+}
