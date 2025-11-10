@@ -12,7 +12,7 @@ html, body{
 
 
 body{
-    background-image: url("img/index.png");
+    background-image: url("img/index.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -202,6 +202,9 @@ nav a:hover::after {
   }
 }
 /* responsive design code  end */
+
+
+
 /* === Side Quotes Grid === */
 .side-quotes {
   position: absolute;
